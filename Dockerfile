@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
 
 RUN curl -SLO "${INTELLIJ_IDEA_URL}/ideaIC-${INTELLIJ_IDEA_VERSION}.tar.gz" && \
     tar -xzf "ideaIC-${INTELLIJ_IDEA_VERSION}.tar.gz" && \
-    mv ideaIC-*/ intellij-idea-community/ && \
+    mv idea-IC-*/ intellij-idea-community/ && \
     rm "ideaIC-${INTELLIJ_IDEA_VERSION}.tar.gz"
 
 ENTRYPOINT ["intellij-idea-community/bin/idea.sh"]
