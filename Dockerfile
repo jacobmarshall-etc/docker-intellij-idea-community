@@ -1,4 +1,4 @@
-FROM java:8-jre
+FROM java:8-jdk
 MAINTAINER Jacob Marshall <jacob@manage.net.nz>
 
 ENV INTELLIJ_IDEA_VERSION 15.0.3
