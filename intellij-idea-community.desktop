@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=IntelliJ IDEA Community
+Exec=sh -c "docker run --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/.IdeaIC15:/root/.IdeaIC15 -v ~/Documents:/root/Documents jacobmarshall/intellij-idea-community:latest"
+Icon=intellij-idea-community
+Terminal=false
+Type=Application
+StartupNotify=true
