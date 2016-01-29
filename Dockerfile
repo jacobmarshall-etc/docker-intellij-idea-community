@@ -7,8 +7,6 @@ ENV INTELLIJ_IDEA_URL https://d1opms6zj7jotq.cloudfront.net/idea
 RUN useradd -m -s /bin/bash developer && \
     chown -R developer:developer /home/developer
 
-USER developer
-
 WORKDIR /opt
 
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl git && \
@@ -18,5 +16,7 @@ RUN curl -SLO "${INTELLIJ_IDEA_URL}/ideaIC-${INTELLIJ_IDEA_VERSION}.tar.gz" && \
     tar -xzf "ideaIC-${INTELLIJ_IDEA_VERSION}.tar.gz" && \
     mv idea-IC-*/ intellij-idea-community/ && \
     rm "ideaIC-${INTELLIJ_IDEA_VERSION}.tar.gz"
+
+USER developer
 
 ENTRYPOINT ["intellij-idea-community/bin/idea.sh"]
