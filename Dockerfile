@@ -4,6 +4,9 @@ MAINTAINER Jacob Marshall <jacob@manage.net.nz>
 ENV INTELLIJ_IDEA_VERSION 15.0.3
 ENV INTELLIJ_IDEA_URL https://d1opms6zj7jotq.cloudfront.net/idea
 
+RUN useradd -m -s /bin/bash developer && \
+    chown -R developer:developer /home/developer
+
 USER developer
 
 WORKDIR /opt
