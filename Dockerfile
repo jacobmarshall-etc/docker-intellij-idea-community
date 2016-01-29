@@ -4,6 +4,8 @@ MAINTAINER Jacob Marshall <jacob@manage.net.nz>
 ENV INTELLIJ_IDEA_VERSION 15.0.3
 ENV INTELLIJ_IDEA_URL https://d1opms6zj7jotq.cloudfront.net/idea
 
+USER developer
+
 WORKDIR /opt
 
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl git && \
